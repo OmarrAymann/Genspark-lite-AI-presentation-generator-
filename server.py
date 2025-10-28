@@ -7,7 +7,7 @@ app = Flask(__name__)
 def generate():
     try:
         data = request.get_json()
-        topic = data.get("topic", " Presentation")
+        topic = data.get("topic", " Messi")
         slides = data.get("slides", 15)
         theme = data.get("theme", " Modern Dark ")
         
@@ -25,7 +25,7 @@ def generate():
 
         output_path = os.path.join(output_dir, f"{topic.replace(' ', '_')}.pptx")
 
-        generate_presentation(topic,slides,theme,output_path)
+        generate_presentation(topic,slides,output_path)
         return send_file(output_path, as_attachment=True)
     
     except Exception as e:

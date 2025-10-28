@@ -14,7 +14,7 @@ st.markdown(
 )
 
 topic = st.text_input("Enter your topic", placeholder="e.g. Artificial Intelligence")
-slides = st.number_input("Number of slides", min_value=5, max_value=16, value=3)
+slides = st.number_input("Number of slides", min_value=5, max_value=16, value=7)
 
 st.markdown("<br>", unsafe_allow_html=True)
 
